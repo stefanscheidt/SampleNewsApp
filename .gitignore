@@ -1,0 +1,9 @@
+backend/SampleNewsApp/.classpath
+backend/SampleNewsApp/.project
+backend/SampleNewsApp/.settings
+backend/SampleNewsApp/.springBeans
+backend/SampleNewsApp/log.roo
+backend/SampleNewsApp/target
+frontend/SampleNewsApp/build
+frontend/SampleNewsApp/SampleNewsApp.xcodeproj/*.mode1*
+frontend/SampleNewsApp/SampleNewsApp.xcodeproj/*.pbxuser

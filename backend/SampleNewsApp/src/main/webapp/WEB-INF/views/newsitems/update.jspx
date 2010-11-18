@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_samplenewsapp_domain_NewsItem" modelAttribute="newsItem" path="/newsitems" z="fGdbOrcZgzp9CriF26OI5U+SL+A=">
+        <field:input field="serNo" id="c_samplenewsapp_domain_NewsItem_serNo" required="true" validationMessageCode="field_invalid_integer" z="MeMuWBb3UhXGTgKXHKWktTukPLA="/>
+        <field:input field="title" id="c_samplenewsapp_domain_NewsItem_title" required="true" z="DclirHBRIi7Vv7eSST8UJQfQ//M="/>
+        <field:input field="subtitle" id="c_samplenewsapp_domain_NewsItem_subtitle" required="true" z="EdCbDjj6g+Rwq+P7Y5tdLRlyX54="/>
+        <field:textarea field="text" id="c_samplenewsapp_domain_NewsItem_text" required="true" z="WkXauwBWnwzBf22AAaln39u7A20="/>
+    </form:update>
+</div>

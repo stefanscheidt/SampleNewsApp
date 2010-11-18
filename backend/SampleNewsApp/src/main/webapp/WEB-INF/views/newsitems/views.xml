@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="newsitems/list">
+        <put-attribute name="body" value="/WEB-INF/views/newsitems/list.jspx"/>
+    </definition>
+<definition extends="default" name="newsitems/show">
+        <put-attribute name="body" value="/WEB-INF/views/newsitems/show.jspx"/>
+    </definition>
+<definition extends="default" name="newsitems/create">
+        <put-attribute name="body" value="/WEB-INF/views/newsitems/create.jspx"/>
+    </definition>
+<definition extends="default" name="newsitems/update">
+        <put-attribute name="body" value="/WEB-INF/views/newsitems/update.jspx"/>
+    </definition>
+<definition extends="default" name="newsitems/findNewsItemsBySerNoGreaterThan">
+        <put-attribute name="body" value="/WEB-INF/views/newsitems/findNewsItemsBySerNoGreaterThan.jspx"/>
+    </definition>
+</tiles-definitions>

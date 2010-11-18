@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="BySerNoGreaterThan" id="ff_samplenewsapp_domain_NewsItem" path="/newsitems" z="cVGQ5O0kK1SE7xgIVmz9FyA+7Lo=">
+        <field:input disableFormBinding="true" field="serNo" id="f_samplenewsapp_domain_NewsItem_serNo" required="true" validationMessageCode="field_invalid_integer" z="gOPAjKAWBU0y3zGcfNQU7CjLm8Y="/>
+    </form:find>
+</div>
