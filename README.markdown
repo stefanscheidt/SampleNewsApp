@@ -23,4 +23,7 @@ Use the service:
     
 **frontend**
 
-Xcode project "SampleNewsApp"
+Xcode project "SampleNewsApp".
+
+This project contains a copy of the TouchJSON library.
+See TouchJSON-README.markdown for details.
