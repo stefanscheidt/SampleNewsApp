@@ -13,7 +13,7 @@
 <definition extends="default" name="newsitems/update">
         <put-attribute name="body" value="/WEB-INF/views/newsitems/update.jspx"/>
     </definition>
-<definition extends="default" name="newsitems/findNewsItemsBySerNoGreaterThan">
-        <put-attribute name="body" value="/WEB-INF/views/newsitems/findNewsItemsBySerNoGreaterThan.jspx"/>
+<definition extends="default" name="newsitems/findNewsItemsByItemNumberGreaterThan">
+        <put-attribute name="body" value="/WEB-INF/views/newsitems/findNewsItemsByItemNumberGreaterThan.jspx"/>
     </definition>
 </tiles-definitions>

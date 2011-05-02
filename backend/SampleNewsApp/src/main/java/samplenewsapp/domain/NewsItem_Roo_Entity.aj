@@ -61,7 +61,7 @@ privileged aspect NewsItem_Roo_Entity {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            NewsItem attached = this.entityManager.find(this.getClass(), this.id);
+            NewsItem attached = NewsItem.findNewsItem(this.id);
             this.entityManager.remove(attached);
         }
     }
@@ -70,6 +70,12 @@ privileged aspect NewsItem_Roo_Entity {
     public void NewsItem.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
+    }
+    
+    @Transactional
+    public void NewsItem.clear() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.clear();
     }
     
     @Transactional
@@ -87,11 +93,11 @@ privileged aspect NewsItem_Roo_Entity {
     }
     
     public static long NewsItem.countNewsItems() {
-        return entityManager().createQuery("select count(o) from NewsItem o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM NewsItem o", Long.class).getSingleResult();
     }
     
     public static List<NewsItem> NewsItem.findAllNewsItems() {
-        return entityManager().createQuery("select o from NewsItem o", NewsItem.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM NewsItem o", NewsItem.class).getResultList();
     }
     
     public static NewsItem NewsItem.findNewsItem(Long id) {
@@ -100,7 +106,7 @@ privileged aspect NewsItem_Roo_Entity {
     }
     
     public static List<NewsItem> NewsItem.findNewsItemEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("select o from NewsItem o", NewsItem.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM NewsItem o", NewsItem.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

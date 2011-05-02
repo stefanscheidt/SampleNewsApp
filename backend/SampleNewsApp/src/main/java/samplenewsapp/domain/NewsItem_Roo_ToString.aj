@@ -9,12 +9,10 @@ privileged aspect NewsItem_Roo_ToString {
     
     public String NewsItem.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Id: ").append(getId()).append(", ");
-        sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("SerNo: ").append(getSerNo()).append(", ");
-        sb.append("Title: ").append(getTitle()).append(", ");
+        sb.append("ItemNumber: ").append(getItemNumber()).append(", ");
         sb.append("Subtitle: ").append(getSubtitle()).append(", ");
-        sb.append("Text: ").append(getText());
+        sb.append("Text: ").append(getText()).append(", ");
+        sb.append("Title: ").append(getTitle());
         return sb.toString();
     }
     

@@ -45,7 +45,7 @@
 @property (readonly, nonatomic, assign) NSUInteger bytesRemaining;
 @property (readonly, nonatomic, assign) BOOL isAtEnd;
 
-+ (id)scannerWithData:(NSData *)inData;
+- (id)initWithData:(NSData *)inData;
 
 - (unichar)currentCharacter;
 - (unichar)scanCharacter;
@@ -59,6 +59,7 @@
 - (BOOL)scanUpToCharactersFromSet:(NSCharacterSet *)set intoString:(NSString **)outValue; // inSet must only contain 7-bit ASCII characters
 
 - (BOOL)scanNumber:(NSNumber **)outValue;
+- (BOOL)scanDecimalNumber:(NSDecimalNumber **)outValue;
 
 - (BOOL)scanDataOfLength:(NSUInteger)inLength intoData:(NSData **)outData;
 

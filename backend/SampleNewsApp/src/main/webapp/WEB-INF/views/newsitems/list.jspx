@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_samplenewsapp_domain_NewsItem" items="${newsitems}" z="9a2q2/yBIrHgEKJ20PQgDO+gUEM=">
         <table:table data="${newsitems}" id="l_samplenewsapp_domain_NewsItem" path="/newsitems" z="M7Ygf7SwW8znbqZuQzCjNO3veJI=">
-            <table:column id="c_samplenewsapp_domain_NewsItem_serNo" property="serNo" z="6JfqciyR0XaExl750HuZjkKJ+BA="/>
+            <table:column id="c_samplenewsapp_domain_NewsItem_itemNumber" property="itemNumber" z="eoihYnYT3eFBEVoQEad6C5Z7wOE="/>
             <table:column id="c_samplenewsapp_domain_NewsItem_title" property="title" z="VCKMmrqlo8KAnf2dztX2HxZkzTo="/>
             <table:column id="c_samplenewsapp_domain_NewsItem_subtitle" property="subtitle" z="dLLvOiJSIFdAPo4DmuNM3XMGjb0="/>
             <table:column id="c_samplenewsapp_domain_NewsItem_text" property="text" z="OR3pIu8AAsNiNtL2fPTUemz1JUM="/>

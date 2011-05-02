@@ -8,12 +8,12 @@ import java.lang.String;
 
 privileged aspect NewsItem_Roo_JavaBean {
     
-    public Long NewsItem.getSerNo() {
-        return this.serNo;
+    public Long NewsItem.getItemNumber() {
+        return this.itemNumber;
     }
     
-    public void NewsItem.setSerNo(Long serNo) {
-        this.serNo = serNo;
+    public void NewsItem.setItemNumber(Long itemNumber) {
+        this.itemNumber = itemNumber;
     }
     
     public String NewsItem.getTitle() {

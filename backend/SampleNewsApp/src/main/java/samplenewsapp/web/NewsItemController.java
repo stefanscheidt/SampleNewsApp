@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import samplenewsapp.domain.NewsItem;
 
@@ -15,12 +14,11 @@ import samplenewsapp.domain.NewsItem;
 @Controller
 public class NewsItemController {
 
-    @RequestMapping(params = "find=BySerNoGreaterThan", method = RequestMethod.GET, headers = "Accept=application/json")
-    @ResponseBody
-    @SuppressWarnings("unchecked")
-    public String findNewsItemsBySerNoGreaterThanJson(@RequestParam("serNo") Long serNo, Model model) {
-        return NewsItem
-                .toJsonArray(NewsItem.findNewsItemsBySerNoGreaterThan(serNo).getResultList());
+    // work around for https://jira.springsource.org/browse/ROO-2362
+    @RequestMapping(params = "find=ByItemNumberGreaterThan", method = RequestMethod.GET)
+    public String findNewsItemsByItemNumberGreaterThan(@RequestParam("itemNumber") Long itemNumber, Model model) {
+        model.addAttribute("newsitems", NewsItem.findNewsItemsByItemNumberGreaterThan(itemNumber).getResultList());
+        return "newsitems/list";
     }
 
 }

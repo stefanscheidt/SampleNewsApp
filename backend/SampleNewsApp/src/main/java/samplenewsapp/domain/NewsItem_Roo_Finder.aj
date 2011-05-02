@@ -10,11 +10,11 @@ import samplenewsapp.domain.NewsItem;
 
 privileged aspect NewsItem_Roo_Finder {
     
-    public static TypedQuery<NewsItem> NewsItem.findNewsItemsBySerNoGreaterThan(Long serNo) {
-        if (serNo == null) throw new IllegalArgumentException("The serNo argument is required");
+    public static TypedQuery<NewsItem> NewsItem.findNewsItemsByItemNumberGreaterThan(Long itemNumber) {
+        if (itemNumber == null) throw new IllegalArgumentException("The itemNumber argument is required");
         EntityManager em = NewsItem.entityManager();
-        TypedQuery<NewsItem> q = em.createQuery("SELECT NewsItem FROM NewsItem AS newsitem WHERE newsitem.serNo > :serNo", NewsItem.class);
-        q.setParameter("serNo", serNo);
+        TypedQuery<NewsItem> q = em.createQuery("SELECT o FROM NewsItem AS o WHERE o.itemNumber > :itemNumber", NewsItem.class);
+        q.setParameter("itemNumber", itemNumber);
         return q;
     }
     
